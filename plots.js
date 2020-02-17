@@ -51,7 +51,7 @@ function buildCharts(sample){
         var otuLabels = result.otu_labels;
         var sampleValues = result.sample_values;
 
-        var filteredData = otuIds.slice(0, 10).map(otuIdBarChart => 'OTU${otuIdBarChart}').reverse();
+        var filteredData = otuIds.slice(0, 10).map(otuIdBarChart => `OTU${otuIdBarChart}`).reverse();
 
         var trace = {
             x: sampleValues.slice(0, 10).reverse(),
@@ -115,10 +115,10 @@ function buildGauge(wfreq){
     var y = radius * Math.sin(radians);
 
     var mainPath = 'M -.0 -0.025 L .0 0.025 L ';
-    pathX = String(x);
-    space = ' ';
-    pathY = String(y);
-    pathEnd = ' Z';
+    var pathX = String(x);
+    var space = ' ';
+    var pathY = String(y);
+    var pathEnd = ' Z';
     var path = mainPath.concat(pathX,space,pathY,pathEnd);
 
     var data = [
@@ -133,7 +133,7 @@ function buildGauge(wfreq){
             hoverinfo: "text + name"
         },
         {
-            values: [60 / 9, 60 / 9, 60 / 9, 60 / 9, 60 / 9, 60 / 9, 60 / 9, 60 / 9, 60 / 9, 60],
+            values: [50 / 9, 50 / 9, 50 / 9, 50 / 9, 50 / 9, 50 / 9, 50 / 9, 50 / 9, 50 / 9, 50],
             rotation: 90,
             text: ["0-1", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8", "8-9", ""],
             textinfo: "text",
@@ -143,7 +143,7 @@ function buildGauge(wfreq){
             },
             labels: ["0-1", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8", "8-9", ""],
             hoverinfo: "label",
-            hole: 0.4,
+            hole: 0.5,
             type: "pie",
             showlegend: false
         }
@@ -152,7 +152,6 @@ function buildGauge(wfreq){
 var layout = {
     shapes:[
         {
-            // type: 'path',
             type: 'path',
             path: path,
             fillcolor: '#000000',
@@ -186,7 +185,7 @@ var layout = {
 };
 
 
-    Plotly.plot(gauge, data, layout);
+    Plotly.newPlot(gauge, data, layout);
 }    
 
 
