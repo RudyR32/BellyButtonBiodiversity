@@ -11,6 +11,6 @@ The dashboard contains the following.<br/>
 https://rudyr32.github.io/BellyButtonBiodiversity/.
 
 ## Code
-[index.html](https://github.com/RudyR32/BellyButtonBiodiversity/blob/master/index.html),br/>
-[plots.js](https://github.com/RudyR32/BellyButtonBiodiversity/blob/master/plots.js)
+[index.html](https://github.com/RudyR32/BellyButtonBiodiversity/blob/master/index.html)<br/>
+[plots.js](https://github.com/RudyR32/BellyButtonBiodiversity/blob/master/plots.js)<br/>
 [samples.json](https://github.com/RudyR32/BellyButtonBiodiversity/blob/master/samples.json)
